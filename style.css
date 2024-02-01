@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --lighter-cyan: hsl(179, 47%, 55%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla";
+}
+
+body {
+  background: var(--light-gray);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr;
+  max-width: 600px;
+  margin: 20px;
+  border-radius: 6px;
+  box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.2);
+}
+
+main #top {
+  background: #fff;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 6px 6px 0px 0px;
+}
+
+#top h2 {
+  color: var(--cyan);
+}
+
+#top span {
+  color: var(--bright-yellow);
+  font-weight: 600;
+}
+
+#top p {
+  color: var(--grayish-blue);
+  font-size: 16px;
+}
+
+main #bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#bottom #left {
+  background-color: var(--cyan);
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #fff;
+  border-radius: 0px 0px 0px 6px;
+}
+
+#left .price {
+  color: var(--light-gray);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 300;
+}
+
+.price span {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#left a {
+  background: var(--bright-yellow);
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#bottom #right {
+  background-color: var(--lighter-cyan);
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 0px 0px 6px 0px;
+}
+
+#right h3 {
+  color: #fff;
+}
+
+#right p {
+  font-weight: 200;
+  color: var(--light-gray);
+}
+
+footer {
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  main {
+    max-width: 375px;
+    grid-template-columns: 1fr;
+  }
+
+  main #bottom {
+    grid-template-columns: 1fr;
+  }
+
+  #bottom #left {
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  #bottom #right {
+    border-radius: 0px 0px 6px 6px;
+  }
+}
